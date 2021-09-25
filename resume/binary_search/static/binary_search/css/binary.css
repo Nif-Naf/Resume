@@ -1,0 +1,26 @@
+.hed {
+    padding-bottom: 10px;
+}
+
+.section{
+    padding-bottom: 5px;
+}
+
+.row {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#hed {
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: #F8F9FA;
+    
+}
+
+#err {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    padding-top: 25px;
+}

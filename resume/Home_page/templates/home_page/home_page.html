@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Главная страница</title>
+    
+    <!--Bootstrap.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Css в проекте.-->
+    <link href="{% static 'home_page/css/home_page.css' %}" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+    <header class="hed">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Резюме</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Проекты
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{% url 'short' %}">Укоротитель ссылок</a></li>
+                      <li><a class="dropdown-item" href="{% url 'start_binary' %}">Бинарный поиск</a></li>
+                      <li><a class="dropdown-item" href="{% url 'start_poll' %}">Опрос</a></li>
+                      <li><a class="dropdown-item" href="{% url 'result_poll' %}">Результаты опроса</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}" tabindex="-1" aria-disabled="true">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+      
+    <section>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col">
+            <div class="block">
+              <h4>О себе</h4>
+                <p>Закончил электротехнический колледж. Работал 
+                  на заводах, выпускающих военную продукцию.
+                </p>
+
+                <p>На данный момент изучаю программирование 
+                  так как данное направление меня привлекало 
+                  всю мою жизнь.
+                </p>
+                 
+                <p>Программирование - перспективное направление, которое открывает 
+                  постоянные пути для развития. 
+                  Данная профессия дает возможность для карьерного роста. 
+                </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class=block>
+              <h4>Навыки и качества</h4>
+                  Мои IT навыки:
+                  <br>Знание Я/П Python 3.8.
+                  <br>Умение работы с БД.
+                  <br>Знание фреймоврка Django.
+                  <br>Умение работать с такими иструментами как: IDE, CMD, VENV, HTML, CSS, Bootstrap.
+                  <br>
+                  <br>Мои основные технические навыки:
+                  <br>Поиск неисправностей/ремонт/настройка электроники на компонентном уровне.
+                  <br>
+                  <br>Личные качества:
+                  <li>Коммуникабельность</li>
+                  <li>Ответственность</li>
+                  <li>Желание развиваться</li>
+                  <li>Обучаемость</li>
+                  <li>Стрессоустойчивость</li>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="block">
+              <h4>Опыт работы</h4>
+                Опыта в разработке на ЯП нет. 
+                <br>
+
+              <br><h4>Образование</h4>
+                  Среднеспециальное 
+                <br>Окончил колледж "Электроники и приборостроения"
+                <br>Профессии: 
+                  <li>Слесарь МСР</li>
+                  <li>Монтажник РЭАиП</li>
+            </div>
+          </div>
+                  
+          <div class="col">
+            <div class="block">
+              <h4>Почему хочу в это направление и почему у меня получится.</h4>
+                <p>Я давно хотел найти ту профессию, которая предоставляет безграничный доступ к саморазвитию. В перевую очередь, я хочу найти свое место как 
+                  профессионал. Я считаю, что со временем в данной области смогу добиться больших высот.
+                </p> 
+      
+                <p>Я довольно хорошо знаю электротехнику и физику. Мне кажется, что в данной области это будет неоспоримым плюсом для меня. Так как понимание все физических процессов на уровне 
+                  "железа" дает вполне ясную картину в целом.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <section class="port">
+      <div class="container-lg">
+        <div id="port-text">
+          <h3>Проекты</h3>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'home_page/images/algorithm.jpg' %}" class="card-img-top" alt="algorithm_img">
+                  <div class="card-body">
+                    <h5 class="card-title">Бинарный поиск</h5>
+                      <p class="card-text">В приложении демонстрируется алгоритм "Бинарный поиск".</p>
+                        <a href="{% url 'start_binary' %}" class="btn btn-primary">Подробнее</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'home_page/images/link.jpg' %}" class="card-img-top" alt="link_img">
+                  <div class="card-body">
+                    <h5 class="card-title">Укоротитель ссылок</h5>
+                      <p class="card-text">Приложение создано для сокращения любых ссылок.</p>
+                        <a href="{% url 'short' %}" class="btn btn-primary">Подробнее</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'home_page/images/poll.png' %}" class="card-img-top" alt="poll_start_img">
+                  <div class="card-body">
+                    <h5 class="card-title">Опрос</h5>
+                      <p class="card-text">Опрос-тест. Собираем важную информацию для этого проекта.</p>
+                        <a href="{% url 'start_poll' %}" class="btn btn-primary">Подробнее</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'home_page/images/poll.png' %}" class="card-img-top" alt="poll_result_img">
+                  <div class="card-body">
+                    <h5 class="card-title">Результат опроса</h5>
+                      <p class="card-text">В этом разделе публикуются ответы на опрос-тест.</p>
+                        <a href="{% url 'result_poll' %}" class="btn btn-primary">Подробнее</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col" id="git">
+            <a href="https://github.com/"><h5>Проект на GitHub</h5></a>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+      
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+  </body>
+</html>
