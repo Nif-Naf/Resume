@@ -1,0 +1,16 @@
+.hed {
+    padding-bottom: 25px;
+}
+
+.row {
+    padding-bottom: 15px;
+}
+
+.col {
+    border: solid 1px rgb(0, 0, 0);
+    text-align: center;
+    background-color: #F8F9FA;
+    padding-top: 15px;  
+    height: 100%;
+}
+

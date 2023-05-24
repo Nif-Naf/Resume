@@ -1,0 +1,43 @@
+.hed {
+    padding-bottom: 25px;
+}
+
+.section{
+    padding-bottom: 5px;
+}
+
+.row {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#name{
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: #F8F9FA;
+    padding-top: 15px;
+}
+
+#context {
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: #F8F9FA;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#url{
+    height: 100%;
+}
+
+#buttom {
+    padding-bottom: 15px;
+}
+
+#err {
+    text-align: center;
+    color: red;
+    padding-top: 25px;
+}

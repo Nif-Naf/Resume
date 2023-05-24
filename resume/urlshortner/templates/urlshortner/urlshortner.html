@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сократитель ссылок</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{% static 'urlshortner/css/style_urls.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="hed">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Резюме</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Проекты
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'short' %}">Укоротитель ссылок</a></li>
+                        <li><a class="dropdown-item" href="{% url 'start_binary' %}">Бинарный поиск</a></li>
+                        <li><a class="dropdown-item" href="{% url 'start_poll' %}">Опрос</a></li>
+                        <li><a class="dropdown-item" href="{% url 'result_poll' %}">Результаты опроса</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'contact' %}" tabindex="-1" aria-disabled="true">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container-lg">
+        <div class="container">
+          <div class="row" id="name">
+            <div class="col">
+              <h3>URL Shortener</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-lg">
+        <div class="container">
+          <div class="row" name="url">
+            <div class="col">      
+              <form action="/urlshortner/urlshort/" id="post-form" method="POST" name="link">
+                {% csrf_token %}
+                          
+                <div class="mb-3">
+                  <input name="link_short" type="link" class="form-control" required placeholder="Enter URL here"> 
+                </div>
+                          
+                <div class="row" >
+                  <div class="col" id="buttom">
+                    <div class="d-grid gap-2">
+                      <button  class="btn btn-primary" type="submit">Shorten</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-lg">
+        <div class="container">
+          <div class="row" id="context">
+            <div class="col" name="context_padding">
+              <h3>Требование к ссылкам для корректного сокращения.</h3>
+              <br>Необходимо вводить ссылки такого формата:
+              <br>www.vk.com
+              <br>www.yandex.ru
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-lg">
+        <div class="row">
+          <div class="container-lg">
+            <div class="col" id="err">
+              <span><h3>{{ error }}</h3></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <img scr='images'
+      <!-- JavaScript Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

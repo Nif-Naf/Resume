@@ -1,0 +1,45 @@
+
+.hed {
+    padding-bottom: 25px;
+}
+
+.block {
+    border: solid 1px rgb(0, 0, 0);
+    padding: 20px;
+    padding-top: 10px;
+    height: 100%;
+    background-color: rgb(248, 249, 250);
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(248, 249, 250);
+}
+
+.port {
+    padding-top: 50px;
+    height: 100%;
+}
+
+.card {
+    height: 100%;
+    border: solid 1px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.col {
+    padding-top: 15px;
+}
+
+#port-text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#git {
+    text-align: center;
+    padding-top: 50px;
+}
