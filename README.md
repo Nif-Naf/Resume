@@ -9,15 +9,15 @@
 База - это файлик в проекте, так что там уже есть данные.
 
 ### Запуск проекта(без контейнеризации). 
-1) Создание виртуального окружения.  python -m venv env
-2) Активировать виртуальное окружение. env/Scripts/activate
-3) Установка всех зависимостей из файла requirements.txt. pip install -r requirements.txt
-4) Запуск приложения через manage.py. python manage.py runserver
+1) Создание виртуального окружения. ``` python -m venv env```
+2) Активировать виртуальное окружение. ```env/Scripts/activate```
+3) Установка всех зависимостей из файла requirements.txt. ```pip install -r requirements.txt```
+4) Запуск приложения через manage.py. ```python manage.py runserver```
 5) Перейти по адресу http://localhost:8000/
 
 ### Запуск проекта(с контейнеризацией). 
 1) Установка Docker(если почему-то не установлен).
-2) Собрать а потом запустить проект командой: docker-compose up --build
+2) Собрать а потом запустить проект командой: ```docker-compose up --build```
 3) Перейти по адресу http://localhost:8000/
 
 ### Изменения внесенные со временем.
